@@ -1,0 +1,10 @@
+#container {
+    margin-bottom: 100px;
+}
+.btn-group.open .dropdown-toggle {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.dropdown-li {
+    padding: 3px 10px;
+}

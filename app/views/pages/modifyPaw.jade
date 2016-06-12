@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+    .container#container
+        .row
+            .col-md-5
+                form(method="post", action="/user/modify")
+                    .modal-body 
+                        if user._id
+                            input(type="hidden", name="user[_id]", value=user._id)
+                        .form-group
+                            label(for="signupName") 用户名
+                            input#signupName.form-control(name="user[name]", type="text" value=user.name)
+                        .form-group
+                            label(for="signupPassword") 密码
+                            input#signupPassword.form-control(name="user[password]", type="password")
+                        .form-group
+                            label(for="signupRole") 角色
+                            input#signupRole.form-control(name="user[role]", type="text" value=user.role)
+                    .modal-footer 
+                        button.btn.btn-success(type="submit") 提交

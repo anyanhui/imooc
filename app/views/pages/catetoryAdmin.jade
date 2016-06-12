@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+    .container#container
+        .row
+            form.form-horizontal(method="post", action="/admin/catetory")
+                .form-group
+                    label.col-sm-2.control-label(for="inputCatetory") 电影分类
+                    .col-sm-10
+                        input#inputCatetory.form-control(type="text",name="catetory[name]" value=catetory.name)
+                .col-sm-offset-2.col-sm-10
+                    button.btn.btn-primary(type="submit") 提交
